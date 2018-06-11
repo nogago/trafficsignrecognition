@@ -1,8 +1,6 @@
 import os
-import random
 import skimage.data
 import skimage.transform
-import matplotlib
 # import matplotlib.pyplot as plt
 import numpy as np
 import tensorflow as tf
@@ -99,7 +97,7 @@ session = tf.Session(graph=graph)
 # First step is always to initialize all variables. 
 # We don't care about the return value, though. It's None.
 _ = session.run([init])
-for i in range(201):
+for i in range(401):
     _, loss_value = session.run([train, loss], 
                                 feed_dict={images_ph: images_a, labels_ph: labels_a})
     if i % 10 == 0:
